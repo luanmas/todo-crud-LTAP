@@ -1,50 +1,40 @@
-# React + TypeScript + Vite
+# Gerenciador de Tarefas
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Este é um projeto de um gerenciador de tarefas desenvolvido com ReactJS, TypeScript, Easy-Peasy e Axios. A aplicação permite criar, ler, atualizar e excluir tarefas (CRUD).
 
-Currently, two official plugins are available:
+## Tecnologias Utilizadas
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+- **ReactJS**: Biblioteca para construir interfaces de usuário.
+- **TypeScript**: Superset do JavaScript que adiciona tipagem estática.
+- **Easy-Peasy**: Biblioteca para gerenciamento de estado.
+- **Axios**: Biblioteca para fazer requisições HTTP.
+- **MockAPI**: Serviço para simular uma API REST.
 
-## Expanding the ESLint configuration
+## Funcionalidades
 
-If you are developing a production application, we recommend updating the configuration to enable type aware lint rules:
+- Criar novas tarefas.
+- Listar todas as tarefas cadastradas.
+- Editar tarefas existentes.
+- Deletar tarefas.
 
-- Configure the top-level `parserOptions` property like this:
+## Pré-requisitos
 
-```js
-export default tseslint.config({
-  languageOptions: {
-    // other options...
-    parserOptions: {
-      project: ['./tsconfig.node.json', './tsconfig.app.json'],
-      tsconfigRootDir: import.meta.dirname,
-    },
-  },
-})
-```
+Para testar a aplicação, você precisará criar uma conta no MockAPI:
 
-- Replace `tseslint.configs.recommended` to `tseslint.configs.recommendedTypeChecked` or `tseslint.configs.strictTypeChecked`
-- Optionally add `...tseslint.configs.stylisticTypeChecked`
-- Install [eslint-plugin-react](https://github.com/jsx-eslint/eslint-plugin-react) and update the config:
+1. Acesse [MockAPI](https://mockapi.io/).
+2. Crie um novo projeto e adicione uma nova rota com o prefixo `/api/todos`.
+3. Configure a rota para incluir os campos necessários (por exemplo, `id`, `title`, `completed`).
+4. Troque a url no arquivo /tasks/model
 
-```js
-// eslint.config.js
-import react from 'eslint-plugin-react'
+## Instruções de Configuração
 
-export default tseslint.config({
-  // Set the react version
-  settings: { react: { version: '18.3' } },
-  plugins: {
-    // Add the react plugin
-    react,
-  },
-  rules: {
-    // other rules...
-    // Enable its recommended rules
-    ...react.configs.recommended.rules,
-    ...react.configs['jsx-runtime'].rules,
-  },
-})
-```
+1. Clone o repositório:
+
+   ```bash
+   git clone https://github.com/luanmas/user-crud-LTAP.git
+   cd todo-crud-LTAP
+
+2. Instale as dependencias (Utilize o npm de preferência)
+   ```bash
+   npm i
+   npm run dev
