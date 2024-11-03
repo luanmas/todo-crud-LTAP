@@ -1,4 +1,4 @@
-import { useEffect, useState } from 'react'
+import { useEffect } from 'react'
 import './App.css'
 import ModalCreateTask from './components/ModalCreateTask';
 import { useStoreActions, useStoreState } from 'easy-peasy';
@@ -51,6 +51,7 @@ function App() {
                     </button>
                     <button className="bg-green-500 text-white px-2 py-1 rounded hover:bg-green-700">
                       <ModalViewDetailsTask data={{
+                        createdAt: todo.createdAt,
                         id: todo.id,
                         title: todo.title,
                         completed: todo.completed

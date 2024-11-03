@@ -2,6 +2,7 @@ import axios from "axios";
 import { Action, action, Thunk, thunk } from "easy-peasy";
 
 export interface Task {
+    createdAt: string
     id: string
     title: string
     completed: boolean

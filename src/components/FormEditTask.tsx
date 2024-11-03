@@ -43,7 +43,7 @@ export default function FormEditTask ({ data, setIsOpen }: IFormEditTask) {
         <div>
             <form onSubmit={handleCreateTask} className="p-6 space-y-4" action="#">
                 <div className="w-full">
-                    <label htmlFor="name" className="block mb-2 text-sm font-medium text-gray-900">Titulo</label>
+                    <label htmlFor="name" className="block mb-2 text-left text-sm font-medium text-gray-900">Titulo</label>
                     <input 
                         type="text" 
                         name="name" 

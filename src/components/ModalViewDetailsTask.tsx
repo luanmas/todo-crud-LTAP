@@ -12,6 +12,11 @@ export default function ModalViewDetailsTask ({ data }: IModalViewDetailsTask) {
         setIsOpen(!isOpen);
     };
 
+    const formatDate = (timestamp: string) => {
+        const date = new Date(Number(timestamp) * 1000)
+        return date.toLocaleDateString("pt-BR")
+    }
+
     return (
         <>
             {isOpen &&
@@ -20,7 +25,7 @@ export default function ModalViewDetailsTask ({ data }: IModalViewDetailsTask) {
                         <div className="bg-white text-black space-y-4 p-2 rounded">
                             <div className="flex justify-between items-center space-x-24">
                                 <h2 className="font-semibold text-xl">Data de Criação</h2>
-                                <span>20/10/2004</span>
+                                <span>{formatDate(data.createdAt)}</span>
                             </div>
                             <div className="flex justify-between items-center space-x-24">
                                 <h2 className="font-semibold text-xl">ID</h2>

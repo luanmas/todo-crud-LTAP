@@ -1,10 +1,16 @@
 import { useState } from "react";
 import FormEditTask from "./FormEditTask";
-import { Task } from "../tasks/model";
+
+interface Task {
+    id: string
+    title: string
+    completed: boolean
+}
 
 interface IModalEditTask {
     data: Task
 }
+
 
 export default function ModalEditTask ({ data }: IModalEditTask) {
     const [isOpen, setIsOpen] = useState(false);
